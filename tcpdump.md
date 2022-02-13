@@ -13,16 +13,44 @@ tcpdump -nNX port 443 # for -X, show header and data in hex & ASCII
 tcpdump -i any # shows packets from all interfaces 
 tcpdump -i eth0 # eth0 = interface-name
 ```
-
-### 4. For everything on an interface, what is the command?
 ### 5. Write the command to find Traffic by IP.
+```sh
+tcpdump host 10.0.2.15 # Everything going in and out
+```
 ### 6. Share the filtering by Source and/or Destination?
+```sh
+tcpdump dst 10.0.2.15 # Packets coming to this IP
+tcpdump src 10.0.2.15 # Packets going from this IP
+```
 ### 7. How to find Packets by Network, write the line.
+```sh
+sudo tcpdump net 10.0.2.0/24  # Packets from this network only
+```
 ### 8. Using packet contents with Hex Output, write the command.
+```sh
+tcpdump -X net 10.0.2.0/24 
+tcpdump host -X 10.0.2.15
+```
 ### 9. To find a specific port traffic, write the command.
+```sh
+sudo tcpdump port 22
+sudo tcpdump dst port 22
+```
 ### 10.Show Traffic of One Protocol command.
+```sh
+sudo tcpdump tcp
+sudo tcpdump tcp port 80 # get tcp packets from specific port
+sudo tcpdump icmp
+sudo tcpdump -X udp
+```
 ### 11. Write the command showing only IP6 Traffic.
+```sh
+sudo tcpdump ip6
+```
 ### 12. Write the command for finding Traffic Using Port Ranges.
+```sh
+sudo tcpdump portrange 8088-8090
+```
 ### 13.What are PCAP (PEE-cap) files?
 ### 14.How are PCAP files processed and why is it so?
 ### 15.Which switch is used to write the PCAP file called capture_file?
@@ -47,8 +75,7 @@ tcpdump -i eth0 # eth0 = interface-name
 ### 34.Why single quotes used?
 ### 35.How to isolate TCP RST flags?
 ### 36.To Isolate TCP SYN flags, which query is used?
-### 37.To Isolate packets that have both the SYN and ACK flags set, what should
-be the command?
+### 37.To Isolate packets that have both the SYN and ACK flags set, what should be the command?
 ### 38.How to Isolate TCP URG flags?
 ### 39.How to Isolate TCP ACK flags?
 ### 40.Isolate TCP PSH flags?
