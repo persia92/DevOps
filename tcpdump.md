@@ -52,11 +52,26 @@ sudo tcpdump ip6
 sudo tcpdump portrange 8088-8090
 ```
 ### 13.What are PCAP (PEE-cap) files?
+.pcap files are used for saving captured packet. 
+PCAP API captures Live network traffic and save it in .pcap file.
 ### 14.How are PCAP files processed and why is it so?
+PCAP files can be process by many network analyzer including tcpdump.
 ### 15.Which switch is used to write the PCAP file called capture_file?
+Write -w switch
 ### 16.What is the command for reading / writing to capture a File?
+```sh
+sudo tcpdump -c 4 -X host 10.0.2.15 -w capture_file.pcap
+```
 ### 17.Which switch is needed to read the PCAP files?
+Read -r switch
 ### 18.What is the tcpdump command while reading in a file?
+```sh
+sudo tcpdump -r capture_file.pcap
+```
+you can apply other command of tcpdump in the file content
+```sh
+sudo tcpdump -nN -r capture_file.pcap
+```
 ### 19.Which switch is used for the ethernet header?
 ### 20.What is Line-readable output? How is it notified?
 ### 21.What does -q implify?
