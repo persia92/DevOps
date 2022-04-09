@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-sample-pod
+spec:
+  containers:
+  - image: my-sample-core:latest
+    imagePullPolicy: IfNotPresent
+    name: my-sample-core-api
+    ports:
+    - containerPort: 5000
+      protocol: TCP
