@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: my-sample-pod
+  name: microservice-one-pod
 spec:
   containers:
   - image: microservice-one-image:latest
     imagePullPolicy: IfNotPresent
-    name: microservice-one-pod
+    name: microservice-one-container
     ports:
     - containerPort: 8080
       protocol: TCP
