@@ -18,7 +18,7 @@ app.UseHttpsRedirection();
 
 app.MapGet("/", () =>
 {
-    return "Hello! This is Microservice One \m/";
+    return "Hello! This is Microservice One.";
 });
 
 app.MapGet("/api", () =>
