@@ -12,5 +12,5 @@ spec:
       protocol: TCP
     livenessProbe:
       httpGet:
-      path: /
-      port: 8080
+        path: /
+        port: 8080
