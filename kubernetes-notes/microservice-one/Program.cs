@@ -26,4 +26,9 @@ app.MapGet("/api", () =>
     return "This is service 1.";
 });
 
+app.MapGet("/health", () =>
+{
+    return StatusCode(500);
+});
+
 app.Run();
